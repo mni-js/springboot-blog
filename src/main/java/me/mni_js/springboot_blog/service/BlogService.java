@@ -24,17 +24,17 @@ public class BlogService {
         return blogRepository.findAll();
     }
 
-    public Article findById(Integer id) {
+    public Article findById(Long id) {
         return blogRepository.findById(id)
                 .orElseThrow(() -> new IllegalArgumentException("not found: " + id));
     }
 
-    public void delete(Integer id) {
+    public void delete(Long id) {
         blogRepository.deleteById(id);
     }
 
     @Transactional
-    public Article update(Integer id, UpdateArticleRequest request) {
+    public Article update(Long id, UpdateArticleRequest request) {
         Article article = blogRepository.findById(id)
                 .orElseThrow(() -> new IllegalArgumentException("not found: " + id));
 

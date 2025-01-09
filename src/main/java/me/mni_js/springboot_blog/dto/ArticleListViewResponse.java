@@ -6,7 +6,7 @@ import me.mni_js.springboot_blog.domain.Article;
 @Getter
 public class ArticleListViewResponse {
 
-    private final Integer id;
+    private final Long id;
     private final String title;
     private final String content;
 
